@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Which type of car should you buy?</title>
+  <meta charset="utf-8">
+  <meta name="description" content="Which type of car should you buy?">
+  <meta name="author" content="Andra">
+  <meta name="generator" content="slidify" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/default.css" media="all" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/phone.css" 
+    media="only screen and (max-device-width: 480px)" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/slidify.css" >
+  <link rel="stylesheet" href="libraries/highlighters/highlight.js/css/tomorrow.css" />
+  <base target="_blank"> <!-- This amazingness opens all links in a new tab. -->  <link rel=stylesheet href="./assets/css/ribbons.css"></link>
+
+  
+  <!-- Grab CDN jQuery, fall back to local if offline -->
+  <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.7.min.js"></script>
+  <script>window.jQuery || document.write('<script src="libraries/widgets/quiz/js/jquery.js"><\/script>')</script> 
+  <script data-main="libraries/frameworks/io2012/js/slides" 
+    src="libraries/frameworks/io2012/js/require-1.0.8.min.js">
+  </script>
+  
+  
+
+</head>
+<body style="opacity: 0">
+  <slides class="layout-widescreen">
+    
+    <!-- LOGO SLIDE -->
+        <slide class="title-slide segue nobackground">
+  <hgroup class="auto-fadein">
+    <h1>Which type of car should you buy?</h1>
+    <h2>Find the best car characteristics</h2>
+    <p>Andra<br/></p>
+  </hgroup>
+  <article></article>  
+</slide>
+    
+
+    <!-- SLIDES -->
+    <slide class="" id="slide-1" style="background:;">
+  <hgroup>
+    <h2>What is important for you in a car?</h2>
+  </hgroup>
+  <article data-timings="">
+    <ul>
+<li>Selecting the right car takes a lot of research and consideration</li>
+<li>What do you want most from your car?</li>
+<li>Is it miles/gallon consumption? Number of cylinders? Horsepower? Type of transmission? </li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-2" style="background:;">
+  <hgroup>
+    <h2>Compare different car types. Make the right decision!</h2>
+  </hgroup>
+  <article data-timings="">
+    <ul>
+<li>Use the Shiny application to check different car types and their characteristics</li>
+<li>Let&#39;s assume you want a car with the best horsepower. You should pick:</li>
+</ul>
+
+<pre><code class="r">rownames(mtcars[mtcars$hp == max(mtcars$hp), ]) 
+</code></pre>
+
+<pre><code>## [1] &quot;Maserati Bora&quot;
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-3" style="background:;">
+  <hgroup>
+    <h2>Check the car characteristics</h2>
+  </hgroup>
+  <article data-timings="">
+    <ul>
+<li>Select this car type from the radio buttons </li>
+</ul>
+
+<pre><code class="r">boxplot(mtcars[nam, ], main = nam, xlab = &quot;Car characteristics&quot;, ylab = &quot;value&quot;)
+</code></pre>
+
+<p><img src="assets/fig/unnamed-chunk-3.png" alt="plot of chunk unnamed-chunk-3"> </p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-4" style="background:;">
+  <hgroup>
+    <h2>Make the right decisions</h2>
+  </hgroup>
+  <article data-timings="">
+    <ul>
+<li>See how efficient your car is in terms of time and consumption</li>
+<li>Check how many minutes it takes for this car to drive 100 miles:</li>
+</ul>
+
+<pre><code class="r">round((mtcars[nam,7]*4*100)/60)
+</code></pre>
+
+<pre><code>## [1] 97
+</code></pre>
+
+<ul>
+<li>Check how many gallons it takes for this car to drive 100 miles:</li>
+</ul>
+
+<pre><code class="r">round(100/mtcars[nam,1],2)
+</code></pre>
+
+<pre><code>## [1] 6.67
+</code></pre>
+
+<ul>
+<li>Now make a conscious decision! </li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+    <slide class="backdrop"></slide>
+  </slides>
+  <div class="pagination pagination-small" id='io2012-ptoc' style="display:none;">
+    <ul>
+      <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=1 title='What is important for you in a car?'>
+         1
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=2 title='Compare different car types. Make the right decision!'>
+         2
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=3 title='Check the car characteristics'>
+         3
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=4 title='Make the right decisions'>
+         4
+      </a>
+    </li>
+  </ul>
+  </div>  <!--[if IE]>
+    <script 
+      src="http://ajax.googleapis.com/ajax/libs/chrome-frame/1/CFInstall.min.js">  
+    </script>
+    <script>CFInstall.check({mode: 'overlay'});</script>
+  <![endif]-->
+</body>
+  <!-- Load Javascripts for Widgets -->
+  
+  <!-- LOAD HIGHLIGHTER JS FILES -->
+  <script src="libraries/highlighters/highlight.js/highlight.pack.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+  <!-- DONE LOADING HIGHLIGHTER JS FILES -->
+   
+  </html>
